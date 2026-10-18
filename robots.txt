@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://logicnudge.github.io/sitemap.xml
