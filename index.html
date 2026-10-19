@@ -8,12 +8,17 @@
 <meta name="description" content="Explore Logic Nudge’s free, verified JavaScript and Python lessons. Predict code behavior, visualize the logic, test examples, and learn by doing.">
 <meta name="robots" content="index,follow,max-image-preview:large">
 <link rel="canonical" href="https://logicnudge.github.io/">
-<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/assets/logic-nudge-favicon.png" type="image/png" sizes="64x64">
+<link rel="apple-touch-icon" href="/assets/logic-nudge-touch.png" sizes="180x180">
 <meta property="og:type" content="website"><meta property="og:site_name" content="Logic Nudge">
 <meta property="og:title" content="Logic Nudge | See what the code is doing">
 <meta property="og:description" content="Code makes more sense when you can see what happens. Explore verified, runnable lessons and visual explainers.">
 <meta property="og:url" content="https://logicnudge.github.io/">
+<meta property="og:image" content="https://logicnudge.github.io/assets/logic-nudge-full-logo.png">
+<meta property="og:image:width" content="800"><meta property="og:image:height" content="800">
+<meta property="og:image:alt" content="Logic Nudge official LN monogram and wordmark">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://logicnudge.github.io/assets/logic-nudge-full-logo.png">
 <title>Logic Nudge — Visual Coding Lessons &amp; Learning Library</title>
 <style>/* Logic Nudge — Field Notes design system. No remote fonts, images, or dependencies. */
 :root{color-scheme:dark;--canvas:#0a1825;--canvas2:#0e2230;--surface:#132836;--surface2:#183241;--text:#eef7f5;--subtle:#bfd1d8;--quiet:#91b2c1;--mint:#64e0cb;--mint-deep:#07342f;--edge:#315061;--edge-soft:#253f50;--max:1176px;--ease:cubic-bezier(.22,1,.36,1)}
@@ -27,8 +32,12 @@ button{cursor:pointer}button:disabled{cursor:not-allowed}
 .shell{max-width:var(--max);margin:0 auto;padding-left:32px;padding-right:32px}
 .site-header{position:relative;z-index:2;border-bottom:1px solid var(--edge-soft)}
 .header-inner{min-height:88px;display:flex;justify-content:space-between;align-items:center;gap:24px}
-.brand{display:inline-flex;gap:13px;align-items:center;font-weight:770;letter-spacing:-.035em;font-size:1.19rem;text-decoration:none;white-space:nowrap}
-.brand-mark{width:29px;height:29px;display:block;color:var(--mint)}
+.brand{display:inline-flex;gap:7px;align-items:center;font-weight:770;letter-spacing:-.035em;font-size:1.19rem;text-decoration:none;white-space:nowrap;min-width:0}
+.brand-mark{width:46px;height:46px;display:block;object-fit:contain;flex:none}
+.brand-word{display:inline-block;line-height:1.1;color:var(--text);letter-spacing:-.04em}
+.brand-word span{color:#27ecc5}
+.footer-brand{display:inline-flex;align-items:center;gap:8px}
+.footer-brand-mark{width:31px;height:31px;display:block;object-fit:contain;flex:none}
 .header-links{display:flex;align-items:center;gap:31px;color:var(--subtle);font-size:.88rem;font-weight:650}
 .header-links a{text-decoration:none;transition:color .2s}.header-links a:hover{color:var(--mint)}.header-links a[aria-current="page"]{color:var(--text)}
 .external{display:inline-flex;align-items:center;gap:6px}
@@ -89,8 +98,9 @@ h2{font-size:clamp(2.15rem,4.2vw,3.4rem);line-height:1.14;letter-spacing:-.035em
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important}}
 @media(max-width:1050px){.hero{grid-template-columns:1fr 1fr;gap:28px}.lesson{grid-template-columns:58px minmax(0,1fr);gap:16px}.lesson-actions{grid-column:2}.method-step{display:block}.method-step b{display:block;margin-bottom:5px}}
 @media(max-width:740px){.shell{padding-left:22px;padding-right:22px}.header-inner{min-height:70px}.header-links{gap:15px}.header-links .hide-mobile{display:none}.hero{grid-template-columns:1fr;padding-top:60px;padding-bottom:65px;gap:40px}h1{font-size:clamp(3rem,10.8vw,4.25rem)}.hero-lead{font-size:1rem;margin:22px 0 25px}.trace{min-height:370px;max-width:560px}.method-inner{grid-template-columns:1fr;gap:0}.method-step{display:flex;padding:15px 0;gap:15px}.method-step b{min-width:30px;margin:0}.method-step+.method-step{border:0;border-top:1px solid var(--edge-soft);padding:15px 0}.library{padding-top:61px;padding-bottom:72px}.library-heading{align-items:start}.library-total{display:none}.library-controls{margin-top:32px}.search-wrap{width:100%}.subjects-label{margin-top:29px}.subject-nav button{padding:13px 18px}.lesson{grid-template-columns:49px 1fr;gap:13px;padding:24px 0}.lesson-num{font-size:.98rem}.lesson-main h4{font-size:1.04rem}.lesson-actions{flex-wrap:wrap;gap:15px}.next-strip{grid-template-columns:1fr;gap:21px;padding:52px 0}}
-@media(max-width:420px){.header-links{gap:12px}.header-links a{font-size:.79rem}.brand{font-size:1.04rem}.brand-mark{width:23px;height:23px}.trace-stage{grid-template-columns:1fr 45px 1.16fr}.trace{min-height:365px}.trace-code{margin:21px}.trace-stage,.trace-head{margin-left:20px;margin-right:20px}.trace-divider{margin-left:20px;margin-right:20px}.trace-bottom{margin:20px}.lesson-actions .read{padding:8px 11px}.hero-flag{margin-bottom:17px}}
+@media(max-width:420px){.header-links{gap:12px}.header-links a{font-size:.79rem}.brand{font-size:1.03rem;gap:5px}.brand-mark{width:39px;height:39px}.trace-stage{grid-template-columns:1fr 45px 1.16fr}.trace{min-height:365px}.trace-code{margin:21px}.trace-stage,.trace-head{margin-left:20px;margin-right:20px}.trace-divider{margin-left:20px;margin-right:20px}.trace-bottom{margin:20px}.lesson-actions .read{padding:8px 11px}.hero-flag{margin-bottom:17px}}
 
+@media(max-width:360px){.header-links .external{display:none}}
 [hidden]{display:none!important}
 
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
@@ -101,7 +111,7 @@ h2{font-size:clamp(2.15rem,4.2vw,3.4rem);line-height:1.14;letter-spacing:-.035em
 <body>
 <a class="skip-link" href="#main-content">Skip to learning library</a>
 <header class="site-header"><div class="shell header-inner">
-  <a class="brand" href="/" aria-label="Logic Nudge home"><svg class="brand-mark" viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M16 1 30 16 16 31 2 16 16 1Z" stroke="currentColor" stroke-width="1.8"/><path d="M16 8 24 16 16 24 8 16 16 8Z" fill="currentColor"/></svg>Logic Nudge</a>
+  <a class="brand" href="/" aria-label="Logic Nudge home"><img class="brand-mark" src="/assets/logic-nudge-transparent.png" width="46" height="46" alt="" decoding="sync" fetchpriority="high"><span class="brand-word">Logic <span>Nudge</span></span></a>
   <nav class="header-links" aria-label="Main navigation"><a href="#main-content" aria-current="page">Explore lessons</a><a class="hide-mobile" href="#method">Our method</a><a class="external" href="https://github.com/logicnudge" target="_blank" rel="noopener noreferrer">GitHub<svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 12 12 4M5 4h7v7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></a></nav>
 </div></header>
 <main id="main-content">
@@ -152,9 +162,9 @@ h2{font-size:clamp(2.15rem,4.2vw,3.4rem);line-height:1.14;letter-spacing:-.035em
   <div id="empty-results" class="empty js-only" hidden role="status"><strong>No matching lessons found.</strong><p>Try a shorter term or select another subject.</p></div>
   <button id="load-more" class="js-only" type="button" hidden>Show more lessons</button>
   </section>
-  <div class="shell next-strip"><div><h2>Not just a video.<br>A way to understand.</h2><p>Every published resource is yours to read, run, and change. No signup, subscription, or downloads required to start learning.</p><a href="https://github.com/logicnudge/learning-labs" target="_blank" rel="noopener noreferrer">Browse the learning labs ↗</a></div><div class="next-steps"><div><b>01</b><span>Watch the explanation when the video is available.</span></div><div><b>02</b><span>Open the verified source and recreate the output.</span></div><div><b>03</b><span>Try a small change. Observe what happens.</span></div></div></div>
+  <div class="shell next-strip"><div><h2>Watch the idea.<br>Run the code.</h2><p>Every published resource is yours to read, run, and change. No signup, subscription, or downloads required to start learning.</p><a href="https://github.com/logicnudge/learning-labs" target="_blank" rel="noopener noreferrer">Browse the learning labs ↗</a></div><div class="next-steps"><div><b>01</b><span>Watch a visual lesson and follow the execution.</span></div><div><b>02</b><span>Open the verified source and recreate the output.</span></div><div><b>03</b><span>Try a small change. Observe what happens.</span></div></div></div>
 </main>
-<footer class="site-footer"><div class="shell footer-inner"><span>© Logic Nudge · A little insight. A lot of clarity.</span><nav class="footer-links" aria-label="Footer navigation"><a href="https://www.youtube.com/@logicnudge">YouTube</a><a href="https://github.com/logicnudge">GitHub</a><a href="https://www.instagram.com/logicnudge/">Instagram</a></nav></div></footer>
+<footer class="site-footer"><div class="shell footer-inner"><span class="footer-brand"><img class="footer-brand-mark" src="/assets/logic-nudge-transparent.png" alt="" width="31" height="31" loading="lazy" decoding="async"><span>© Logic Nudge · A little insight. A lot of clarity.</span></span><nav class="footer-links" aria-label="Footer navigation"><a href="https://www.youtube.com/@logicnudge">YouTube</a><a href="https://github.com/logicnudge">GitHub</a><a href="https://www.instagram.com/logicnudge/">Instagram</a></nav></div></footer>
 <script>/* Topic filters are button controls, not ARIA tab widgets: one shared list, global search. */
 (() => {
   'use strict';
