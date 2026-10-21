@@ -1,6 +1,6 @@
 # Logic Nudge — Learning Hub
 
-An independent static learning directory. The first published lessons point to verified JavaScript resources.
+An independent static learning directory with 30 published video-and-code lessons: JavaScript #001–#010, Python #011–#020, and DSA #021–#030.
 
 **Audience:** Students and developers who want to predict, run and understand real code.
 
@@ -12,12 +12,10 @@ An independent static learning directory. The first published lessons point to v
 - In repository **Settings → Pages**, set **Deploy from a branch**, **main**, **/(root)** and Save.
 - Verify the live address in a signed-out browser before linking it from any social profile.
 
-The intended URL is `https://logicnudge.github.io/` but it is **not live** until the repository and Pages configuration are successfully published.
+The public Learning Hub is available at **https://logicnudge.github.io/**. All 30 lesson cards link to a code resource and a published YouTube Short.
 
 No backend, account creation, analytics tracking, cookies, external CSS/JS libraries, paid service, or API keys are required.
 
 ## Publishing policy
 
-Only list lessons with verified public resource URLs. Future Python and DSA items remain hidden until actually published and checked. Update this file with the `release-ops/tools/build_hub.py` generator rather than hand-editing cards.
-
-To add Python #011–#020 after learner resources are public, use the verified two-manifest `build_hub.py --online` workflow from the release-ops directory described in `START_HERE.md` of the implementation kit. Never publish draft URLs.
+Only list lessons with verified public code resources and published video URLs. All 30 first-season lessons are published. For future episodes, use the release-ops generator and verified two-manifest publishing workflow when available. Never publish draft URLs.
